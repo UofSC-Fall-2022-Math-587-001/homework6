@@ -1,56 +1,61 @@
-package hw5
+package hw6
 
 import (
 	"testing"
-	"github.com/UofSC-Fall-2022-Math-587-001/homework5/library"
 )
 
 func Test1(t *testing.T) {
-	val := library.FastPower(11,2,3)
-	got := babyGiantStep(11,2,val)
-	want := 3
+	N := 3
+	a := 1
+	M := 4
+	b := 2
+	P := N*M
+	got := solvePairCongRelPrime(N,a,M,b)
+	want := 10 
 
-	if got != want {
-		t.Errorf("%d vs %d", got, want)
+	if (got - want % P) != 0  {
+		t.Errorf("You say that %d solves x = %d mod %d and x = %d mod %d but it is not equal to %d mod %d", got, a, N, b, M, want, P)
 	}
 }
 
 func Test2(t *testing.T) {
-	val := library.FastPower(13,2,8)
-	got := babyGiantStep(13,2,val)
-	want := 8
+	N := 5
+	a := 2
+	M := 7
+	b := 5
+	P := N*M
+	got := solvePairCongRelPrime(N,a,M,b)
+	want := 12 
 
-	if got != want {
-		t.Errorf("%d vs %d", got, want)
+	if (got - want % P) != 0  {
+		t.Errorf("You say that %d solves x = %d mod %d and x = %d mod %d but it is not equal to %d mod %d", got, a, N, b, M, want, P)
 	}
 }
 
 func Test3(t *testing.T) {
-	val := library.FastPower(23,15,8)
-	got := babyGiantStep(23,15,val)
-	want := 8
+	N := 19
+	a := 17
+	M := 23
+	b := 13
+	P := N*M
+	got := solvePairCongRelPrime(N,a,M,b)
+	want := 36 
 
-	if got != want {
-		t.Errorf("%d vs %d", got, want)
+	if (got - want % P) != 0  {
+		t.Errorf("You say that %d solves x = %d mod %d and x = %d mod %d but it is not equal to %d mod %d", got, a, N, b, M, want, P)
 	}
 }
 
 func Test4(t *testing.T) {
-	val := library.FastPower(29,27,2)
-	got := babyGiantStep(29,27,val)
-	want := 2
+	N := 59
+	a := 54
+	M := 71
+	b := 34
+	P := N*M
+	got := solvePairCongRelPrime(N,a,M,b)
+	want := 105 
 
-	if got != want {
-		t.Errorf("%d vs %d", got, want)
-	}
-}
-
-func Test5(t *testing.T) {
-	val := library.FastPower(2,1,0)
-	got := babyGiantStep(2,1,val)
-	want := 0
-
-	if got != want {
-		t.Errorf("%d vs %d", got, want)
+	if (got - want % P) != 0  {
+		t.Errorf("You say that %d solves x = %d mod %d and x = %d mod %d but it is not equal to %d mod %d", got, a, N, b, M, want, P)
 	}
 }

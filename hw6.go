@@ -1,18 +1,16 @@
 package hw6
 
 import (
-	// You might need these
-	// "sort" 
-	// "math"
-
 	// "github.com/UofSC-Fall-2022-Math-587-001/homework5/library"
 )
 
-func babyGiantStep(N, b, y int) int {
-	// Implement Shanks's Babystep-Giantstep algorithm (Prop 2.21 in the 
-	// textbook). Can you implement this with O(N^{1/2} log N) performance? 
-	// (Hint: the sort package is imported for reason. Take a look at the 
-	// documentation for sort.Sort and sort.Search.)
-	return 0 
+func solvePairCongRelPrime(N, a, M, b int) int {
+	// Suppose that we want to solve x = a mod N and x = b mod M. The Chinese 
+	// Remainder Theorem allows to do this if M and N are relatively prime, ie 
+	// if gcd(M,N). This function should 
+	// - check that M and N are relatively prime 
+	// - if they are, then use the algorithm to find a single integer x solving 
+	// both congruences 
+	return 0
 }
 
