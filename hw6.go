@@ -1,7 +1,7 @@
 package hw6
 
 import (
-	// "github.com/UofSC-Fall-2022-Math-587-001/homework5/library"
+	// "github.com/UofSC-Fall-2022-Math-587-001/homework6/library"
 )
 
 func solvePairCongRelPrime(N, a, M, b int) int {
