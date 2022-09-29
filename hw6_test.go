@@ -48,7 +48,7 @@ func Test3(t *testing.T) {
 
 func Test4(t *testing.T) {
 	N := 59
-	a := 54
+	a := 46
 	M := 71
 	b := 34
 	P := N*M
